@@ -136,10 +136,10 @@ public class PlayerStats : NetworkBehaviour
         SendCurrentScoreRpc(m_Score.Value, RpcTarget.Single(senderClientId, RpcTargetUse.Temp));
     }
 
-    [Rpc(SendTo.SpecifiedInParams)]
+    [Rpc(SendTo.Server)]
     private void SendCurrentScoreRpc(int currentScore, RpcParams rpcParams)
     {
-        m_Score.Value = currentScore;
-        ApplyScore(m_Score.Value);
+        if (!IsServer) return;
+        m_Score.Value = currentScore; 
     }
 }
