@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: -57971889602387838}
   - component: {fileID: -6121376855176265511}
   - component: {fileID: 107995186775991297}
+  - component: {fileID: 8640317612511428527}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -233,7 +234,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3035617301514769611}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0eebcc34dc92ab428dce1956efacc81, type: 3}
   m_Name: 
@@ -307,6 +308,23 @@ MonoBehaviour:
   UseRigidBodyForMotion: 0
   AutoUpdateKinematicState: 1
   AutoSetKinematicOnDespawn: 1
+--- !u!114 &8640317612511428527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3035617301514769611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 276408e6097da76458784fc4bb2ec23d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NetworkStudy.Gameplay.CoinCollector
+  ShowTopMostFoldoutHeaderGroup: 1
+  m_PickupSearchRadius: 2
+  coinLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &4640401380876625301
 GameObject:
   m_ObjectHideFlags: 0
