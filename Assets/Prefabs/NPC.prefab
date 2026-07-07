@@ -212,7 +212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2609512652898624067
 Transform:
   m_ObjectHideFlags: 0
@@ -892,7 +892,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7398945926563706471
 Transform:
   m_ObjectHideFlags: 0
@@ -1521,12 +1521,10 @@ GameObject:
   - component: {fileID: 9015973752938878552}
   - component: {fileID: 4866861882411935001}
   - component: {fileID: 3239426823627098712}
-  - component: {fileID: 9024954532485501767}
-  - component: {fileID: -6424745972345876129}
-  - component: {fileID: 1536909361302307672}
-  - component: {fileID: -3166186113430519629}
+  - component: {fileID: 4450351931607905846}
+  - component: {fileID: 2693705315503440779}
   m_Layer: 0
-  m_Name: StudentPlayer
+  m_Name: NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1586,7 +1584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 3507369110
+  GlobalObjectIdHash: 815186432
   InScenePlacedSourceGlobalObjectIdHash: 3507369110
   DeferredDespawnTick: 0
   Ownership: 1
@@ -1674,7 +1672,29 @@ MonoBehaviour:
       Synchronize: 1
       ParameterType: 9
   AnimatorParametersExpanded: 0
---- !u!114 &9024954532485501767
+--- !u!195 &4450351931607905846
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6227309924886585922}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &2693705315503440779
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1683,60 +1703,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6227309924886585922}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 313cce8f59a742eaa0b41caf53878c82, type: 3}
+  m_Script: {fileID: 11500000, guid: c2c7ff9694149964abc55f4e840607b1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NetworkStudy.Student.MyPlayerMovement
-  ShowTopMostFoldoutHeaderGroup: 1
-  m_JumpForce: 10
-  m_MoveSpeed: 5
-  m_RotateSpeed: 1
---- !u!114 &-6424745972345876129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6227309924886585922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a08e88bcadc6f9047aae2379124bb151, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimation
-  ShowTopMostFoldoutHeaderGroup: 1
---- !u!114 &1536909361302307672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6227309924886585922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79799a9ca61c63d4da89283fa4d0eec3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerApperance
-  ShowTopMostFoldoutHeaderGroup: 1
-  m_Variants:
-  - {fileID: 7662085071091392902}
-  - {fileID: 5306457226953341507}
-  - {fileID: 1928112090893885878}
-  - {fileID: 4999937284171513965}
---- !u!114 &-3166186113430519629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6227309924886585922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6e75d5813617a4084b632a41066e21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PhysicsKicker
-  ShowTopMostFoldoutHeaderGroup: 1
-  m_KickRadius: 3
-  m_KickForce: 3
-  m_KickUpwardForce: 0.4
+  m_EditorClassIdentifier: Assembly-CSharp::NPCPatrol
 --- !u!1 &6490225260529140034
 GameObject:
   m_ObjectHideFlags: 0
